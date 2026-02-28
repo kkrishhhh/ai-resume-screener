@@ -119,16 +119,23 @@ export default function AnalyzePage() {
             clearTimeout(stepTimer1);
             clearTimeout(stepTimer2);
 
-            const data = await response.json();
+            const responseText = await response.text();
+            let data;
+            try {
+                data = JSON.parse(responseText);
+            } catch (e) {
+                throw new Error(`Server returned ${response.status}: ${response.statusText}. Please try again.`);
+            }
 
             if (!response.ok) {
-                throw new Error(data.error || "Analysis failed");
+                throw new Error(data.error || `Error ${response.status}: Analysis failed`);
             }
 
             setAnalysisData(data.data);
             setStage("results");
         } catch (err) {
-            setError(err instanceof Error ? err.message : "Something went wrong");
+            console.error("Analysis fetch error:", err);
+            setError(err instanceof Error ? err.message : "Something went wrong catching the error");
             setStage("upload");
         }
     };

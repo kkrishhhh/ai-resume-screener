@@ -1,11 +1,19 @@
 import { Redis } from '@upstash/redis'
 
-export const redis = new Redis({
-    url: process.env.UPSTASH_REDIS_REST_URL!,
-    token: process.env.UPSTASH_REDIS_REST_TOKEN!,
-});
+let _redis: Redis | null = null;
+
+function getRedis(): Redis {
+    if (!_redis) {
+        _redis = new Redis({
+            url: process.env.UPSTASH_REDIS_REST_URL!,
+            token: process.env.UPSTASH_REDIS_REST_TOKEN!,
+        });
+    }
+    return _redis;
+}
 
 export async function rateLimit(identifier: string, limit: number, windowSeconds: number) {
+    const redis = getRedis();
     const key = `ratelimit:${identifier}`;
     const currentCount = await redis.incr(key);
 

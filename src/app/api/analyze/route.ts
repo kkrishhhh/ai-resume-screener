@@ -117,15 +117,19 @@ export async function POST(request: NextRequest) {
             data: { ...analysis, id: savedAnalysisId },
             filename: file.name,
         });
-    } catch (error) {
+    } catch (error: any) {
         console.error("Analysis error:", error);
+
+        let errorDetails = error instanceof Error
+            ? `[DEBUG] ${error.name}: ${error.message} \nStack: ${error.stack}`
+            : "Analysis failed. Please try again.";
+
+        if (error.cause) {
+            errorDetails += `\nCause: ${error.cause instanceof Error ? error.cause.message : JSON.stringify(error.cause)}`;
+        }
+
         return NextResponse.json(
-            {
-                error:
-                    error instanceof Error
-                        ? `[DEBUG] ${error.name}: ${error.message} \nStack: ${error.stack}`
-                        : "Analysis failed. Please try again.",
-            },
+            { error: errorDetails },
             { status: 500 }
         );
     }

@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { generateRoadmap } from "@/lib/llm";
 import { rateLimit } from "@/lib/redis";
 
+// Allow up to 60 seconds for Vercel Serverless Functions to prevent timeout "Connection error"
+export const maxDuration = 60;
+
 export async function POST(request: NextRequest) {
     try {
         // Rate limiting (50 roadmaps per IP per day)

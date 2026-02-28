@@ -3,6 +3,9 @@ import { extractTextFromPdf } from "@/lib/pdf-parser";
 import { analyzeResume } from "@/lib/llm";
 import { rateLimit } from "@/lib/redis";
 
+// Allow up to 60 seconds for Vercel Serverless Functions to prevent timeout "Connection error"
+export const maxDuration = 60;
+
 export async function POST(request: NextRequest) {
     try {
         // Rate limiting (50 analyzes per IP per day)

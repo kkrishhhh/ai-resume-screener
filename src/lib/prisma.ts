@@ -1,28 +1,29 @@
-import { Pool } from "pg";
-import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@prisma/client";
 
-const prismaClientSingleton = () => {
-    // Vercel build phase might not have the DB URL injected when evaluating modules
-    const connectionString = process.env.DATABASE_URL;
+// Use a global variable to cache the client across hot reloads in development
+const globalForPrisma = globalThis as unknown as {
+    _prisma: PrismaClient | undefined;
+};
 
-    if (!connectionString) {
-        return new PrismaClient();
+function getPrismaClient(): PrismaClient {
+    if (globalForPrisma._prisma) {
+        return globalForPrisma._prisma;
     }
 
+    // Lazy import: only runs when actually called at request-time, never at build-time
+    const { Pool } = require("pg") as typeof import("pg");
+    const { PrismaPg } = require("@prisma/adapter-pg") as typeof import("@prisma/adapter-pg");
+
+    const connectionString = process.env.DATABASE_URL!;
     const pool = new Pool({ connectionString });
     const adapter = new PrismaPg(pool);
-    return new PrismaClient({ adapter });
-};
+    const client = new PrismaClient({ adapter });
 
-type PrismaClientSingleton = ReturnType<typeof prismaClientSingleton>;
+    if (process.env.NODE_ENV !== "production") {
+        globalForPrisma._prisma = client;
+    }
 
-const globalForPrisma = globalThis as unknown as {
-    prisma: PrismaClientSingleton | undefined;
-};
+    return client;
+}
 
-const prisma = globalForPrisma.prisma ?? prismaClientSingleton();
-
-export default prisma;
-
-if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+export default getPrismaClient;

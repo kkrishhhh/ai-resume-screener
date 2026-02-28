@@ -86,7 +86,8 @@ export async function POST(request: NextRequest) {
         // Save to DB (best-effort — don't crash the whole analysis if DB fails)
         let savedAnalysisId: string | null = null;
         try {
-            const prisma = (await import("@/lib/prisma")).default;
+            const getPrismaClient = (await import("@/lib/prisma")).default;
+            const prisma = getPrismaClient();
 
             const savedAnalysis = await prisma.analysis.create({
                 data: {

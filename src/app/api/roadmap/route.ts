@@ -24,7 +24,8 @@ export async function POST(request: NextRequest) {
 
 
         // Dynamically import prisma to prevent Next.js edge runtime execution issues
-        const prisma = (await import("@/lib/prisma")).default;
+        const getPrismaClient = (await import("@/lib/prisma")).default;
+        const prisma = getPrismaClient();
 
         // Fetch analysis from DB
         const analysis = await prisma.analysis.findUnique({

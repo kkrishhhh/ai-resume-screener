@@ -123,7 +123,7 @@ export async function POST(request: NextRequest) {
             {
                 error:
                     error instanceof Error
-                        ? error.message
+                        ? `[DEBUG] ${error.name}: ${error.message} \nStack: ${error.stack}`
                         : "Analysis failed. Please try again.",
             },
             { status: 500 }

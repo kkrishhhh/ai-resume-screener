@@ -1,0 +1,175 @@
+2025-06-17 19:27:09,465 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 19:27:09,465 - [33mPress CTRL+C to quit[0m
+2025-06-17 19:27:09,468 -  * Restarting with stat
+2025-06-17 19:27:11,763 -  * Debugger is active!
+2025-06-17 19:27:11,770 -  * Debugger PIN: 778-736-281
+2025-06-17 19:27:27,866 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 19:27:27,868 - [33mPress CTRL+C to quit[0m
+2025-06-17 19:27:27,871 -  * Restarting with stat
+2025-06-17 19:27:30,282 -  * Debugger is active!
+2025-06-17 19:27:30,287 -  * Debugger PIN: 778-736-281
+2025-06-17 19:27:33,759 - 127.0.0.1 - - [17/Jun/2025 19:27:33] "GET / HTTP/1.1" 200 -
+2025-06-17 19:27:40,819 - 127.0.0.1 - - [17/Jun/2025 19:27:40] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-06-17 19:27:41,058 - 127.0.0.1 - - [17/Jun/2025 19:27:41] "[36mGET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-17 19:27:41,061 - 127.0.0.1 - - [17/Jun/2025 19:27:41] "[36mGET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-17 19:27:41,132 - 127.0.0.1 - - [17/Jun/2025 19:27:41] "GET /predict?__debugger__=yes&cmd=resource&f=console.png&s=JDpjriKhMxap8x9wUUB8 HTTP/1.1" 200 -
+2025-06-17 19:27:41,220 - 127.0.0.1 - - [17/Jun/2025 19:27:41] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-17 19:28:32,433 -  * Detected change in 'C:\\Users\\Krishna thakur\\Documents\\AI_Resume_Screener\\app.py', reloading
+2025-06-17 19:28:32,727 -  * Restarting with stat
+2025-06-17 19:28:35,142 -  * Debugger is active!
+2025-06-17 19:28:35,147 -  * Debugger PIN: 778-736-281
+2025-06-17 19:28:44,980 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 19:28:44,980 - [33mPress CTRL+C to quit[0m
+2025-06-17 19:28:44,981 -  * Restarting with stat
+2025-06-17 19:28:47,358 -  * Debugger is active!
+2025-06-17 19:28:47,363 -  * Debugger PIN: 778-736-281
+2025-06-17 19:28:55,183 - 127.0.0.1 - - [17/Jun/2025 19:28:55] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-06-17 19:28:55,368 - 127.0.0.1 - - [17/Jun/2025 19:28:55] "[36mGET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-17 19:28:55,380 - 127.0.0.1 - - [17/Jun/2025 19:28:55] "[36mGET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-17 19:28:55,437 - 127.0.0.1 - - [17/Jun/2025 19:28:55] "GET /predict?__debugger__=yes&cmd=resource&f=console.png&s=Ag9zjsFhbSlsrmECz50b HTTP/1.1" 200 -
+2025-06-17 19:30:09,008 -  * Detected change in 'C:\\Users\\Krishna thakur\\Documents\\AI_Resume_Screener\\utils\\report_generator.py', reloading
+2025-06-17 19:30:09,248 -  * Restarting with stat
+2025-06-17 19:30:11,692 -  * Debugger is active!
+2025-06-17 19:30:11,698 -  * Debugger PIN: 778-736-281
+2025-06-17 19:30:21,098 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 19:30:21,098 - [33mPress CTRL+C to quit[0m
+2025-06-17 19:30:21,100 -  * Restarting with stat
+2025-06-17 19:30:23,328 -  * Debugger is active!
+2025-06-17 19:30:23,334 -  * Debugger PIN: 778-736-281
+2025-06-17 19:30:26,744 - resume-krishnathakur.pdf - Frontend Developer - 28.89%
+2025-06-17 19:30:26,753 - 127.0.0.1 - - [17/Jun/2025 19:30:26] "POST /predict HTTP/1.1" 200 -
+2025-06-17 19:30:29,545 - 127.0.0.1 - - [17/Jun/2025 19:30:29] "GET /download/resume-krishnathakur_report.pdf HTTP/1.1" 200 -
+2025-06-17 19:32:15,873 -  * Detected change in 'C:\\Users\\Krishna thakur\\Documents\\AI_Resume_Screener\\utils\\report_generator.py', reloading
+2025-06-17 19:32:16,171 -  * Restarting with stat
+2025-06-17 19:32:19,228 -  * Debugger is active!
+2025-06-17 19:32:19,234 -  * Debugger PIN: 778-736-281
+2025-06-17 19:32:26,986 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 19:32:26,987 - [33mPress CTRL+C to quit[0m
+2025-06-17 19:32:26,989 -  * Restarting with stat
+2025-06-17 19:32:30,358 -  * Debugger is active!
+2025-06-17 19:32:30,366 -  * Debugger PIN: 778-736-281
+2025-06-17 19:32:31,521 - 127.0.0.1 - - [17/Jun/2025 19:32:31] "GET / HTTP/1.1" 200 -
+2025-06-17 19:32:38,992 - resume-krishnathakur.pdf - Frontend Developer - 28.89%
+2025-06-17 19:32:38,998 - 127.0.0.1 - - [17/Jun/2025 19:32:38] "POST /predict HTTP/1.1" 200 -
+2025-06-17 19:32:40,511 - 127.0.0.1 - - [17/Jun/2025 19:32:40] "GET /download/resume-krishnathakur_report.pdf HTTP/1.1" 200 -
+2025-06-17 19:40:20,713 -  * Detected change in 'C:\\Users\\Krishna thakur\\Documents\\AI_Resume_Screener\\app.py', reloading
+2025-06-17 19:40:21,067 -  * Restarting with stat
+2025-06-17 19:41:43,692 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 19:41:43,693 - [33mPress CTRL+C to quit[0m
+2025-06-17 19:41:43,694 -  * Restarting with stat
+2025-06-17 19:41:46,313 -  * Debugger is active!
+2025-06-17 19:41:46,318 -  * Debugger PIN: 778-736-281
+2025-06-17 19:41:47,457 - 127.0.0.1 - - [17/Jun/2025 19:41:47] "GET / HTTP/1.1" 200 -
+2025-06-17 19:41:55,741 - resume-krishnathakur.pdf - Frontend Developer - 28.89%
+2025-06-17 19:41:55,747 - 127.0.0.1 - - [17/Jun/2025 19:41:55] "POST /predict HTTP/1.1" 200 -
+2025-06-17 19:41:57,550 - 127.0.0.1 - - [17/Jun/2025 19:41:57] "GET /download/resume-krishnathakur_report.pdf HTTP/1.1" 200 -
+2025-06-17 23:35:58,604 - 127.0.0.1 - - [17/Jun/2025 23:35:58] "GET / HTTP/1.1" 200 -
+2025-06-17 23:38:58,136 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 23:38:58,137 - [33mPress CTRL+C to quit[0m
+2025-06-17 23:38:58,139 -  * Restarting with stat
+2025-06-17 23:39:01,072 -  * Debugger is active!
+2025-06-17 23:39:01,082 -  * Debugger PIN: 778-736-281
+2025-06-17 23:39:03,586 - 127.0.0.1 - - [17/Jun/2025 23:39:03] "GET / HTTP/1.1" 200 -
+2025-06-17 23:39:11,078 - resume-krishnathakur.pdf - Frontend Developer - 28.89%
+2025-06-17 23:39:11,086 - 127.0.0.1 - - [17/Jun/2025 23:39:11] "POST /predict HTTP/1.1" 200 -
+2025-06-17 23:39:14,941 - 127.0.0.1 - - [17/Jun/2025 23:39:14] "GET / HTTP/1.1" 200 -
+2025-06-17 23:40:50,796 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 23:40:50,797 - [33mPress CTRL+C to quit[0m
+2025-06-17 23:40:50,800 -  * Restarting with stat
+2025-06-17 23:40:53,404 -  * Debugger is active!
+2025-06-17 23:40:53,409 -  * Debugger PIN: 778-736-281
+2025-06-17 23:40:54,946 - 127.0.0.1 - - [17/Jun/2025 23:40:54] "GET / HTTP/1.1" 200 -
+2025-06-17 23:41:01,088 - resume-krishnathakur.pdf - Frontend Developer - 28.89%
+2025-06-17 23:41:01,116 - 127.0.0.1 - - [17/Jun/2025 23:41:01] "POST /predict HTTP/1.1" 200 -
+2025-06-17 23:41:11,050 - 127.0.0.1 - - [17/Jun/2025 23:41:11] "GET / HTTP/1.1" 200 -
+2025-06-17 23:41:16,957 - resume-krishnathakur.pdf - Frontend Developer - 28.89%
+2025-06-17 23:41:16,959 - 127.0.0.1 - - [17/Jun/2025 23:41:16] "POST /predict HTTP/1.1" 200 -
+2025-06-17 23:41:19,199 - 127.0.0.1 - - [17/Jun/2025 23:41:19] "GET / HTTP/1.1" 200 -
+2025-06-17 23:43:27,937 -  * Detected change in 'C:\\Users\\Krishna thakur\\Documents\\AI_Resume_Screener\\utils\\report_generator.py', reloading
+2025-06-17 23:43:28,181 -  * Restarting with stat
+2025-06-17 23:43:30,652 -  * Debugger is active!
+2025-06-17 23:43:30,656 -  * Debugger PIN: 778-736-281
+2025-06-17 23:43:36,820 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 23:43:36,820 - [33mPress CTRL+C to quit[0m
+2025-06-17 23:43:36,822 -  * Restarting with stat
+2025-06-17 23:43:39,144 -  * Debugger is active!
+2025-06-17 23:43:39,150 -  * Debugger PIN: 778-736-281
+2025-06-17 23:43:42,576 - 127.0.0.1 - - [17/Jun/2025 23:43:42] "GET / HTTP/1.1" 200 -
+2025-06-17 23:43:48,045 - 127.0.0.1 - - [17/Jun/2025 23:43:48] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-06-17 23:43:48,238 - 127.0.0.1 - - [17/Jun/2025 23:43:48] "[36mGET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-17 23:43:48,240 - 127.0.0.1 - - [17/Jun/2025 23:43:48] "[36mGET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-17 23:43:48,310 - 127.0.0.1 - - [17/Jun/2025 23:43:48] "GET /predict?__debugger__=yes&cmd=resource&f=console.png&s=AKckGe0T0nNkDQLkIxEz HTTP/1.1" 200 -
+2025-06-17 23:43:48,402 - 127.0.0.1 - - [17/Jun/2025 23:43:48] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-17 23:44:43,048 -  * Detected change in 'C:\\Users\\Krishna thakur\\Documents\\AI_Resume_Screener\\utils\\report_generator.py', reloading
+2025-06-17 23:44:43,293 -  * Restarting with stat
+2025-06-17 23:44:45,758 -  * Debugger is active!
+2025-06-17 23:44:45,764 -  * Debugger PIN: 778-736-281
+2025-06-17 23:45:02,959 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 23:45:02,960 - [33mPress CTRL+C to quit[0m
+2025-06-17 23:45:02,962 -  * Restarting with stat
+2025-06-17 23:45:06,009 -  * Debugger is active!
+2025-06-17 23:45:06,015 -  * Debugger PIN: 778-736-281
+2025-06-17 23:45:06,151 - 127.0.0.1 - - [17/Jun/2025 23:45:06] "GET / HTTP/1.1" 200 -
+2025-06-17 23:45:11,963 - resume-krishnathakur.pdf - Frontend Developer - 28.89%
+2025-06-17 23:45:11,970 - 127.0.0.1 - - [17/Jun/2025 23:45:11] "POST /predict HTTP/1.1" 200 -
+2025-06-17 23:45:14,412 - 127.0.0.1 - - [17/Jun/2025 23:45:14] "GET /download/resume-krishnathakur_report.pdf HTTP/1.1" 200 -
+2025-06-17 23:54:52,790 -  * Detected change in 'C:\\Users\\Krishna thakur\\Documents\\AI_Resume_Screener\\app.py', reloading
+2025-06-17 23:54:53,065 -  * Restarting with stat
+2025-06-17 23:54:55,340 -  * Debugger is active!
+2025-06-17 23:54:55,344 -  * Debugger PIN: 778-736-281
+2025-06-17 23:55:02,705 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 23:55:02,705 - [33mPress CTRL+C to quit[0m
+2025-06-17 23:55:02,707 -  * Restarting with stat
+2025-06-17 23:55:04,816 -  * Debugger is active!
+2025-06-17 23:55:04,821 -  * Debugger PIN: 778-736-281
+2025-06-17 23:56:26,298 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-17 23:56:26,299 - [33mPress CTRL+C to quit[0m
+2025-06-17 23:56:26,302 -  * Restarting with stat
+2025-06-17 23:56:28,537 -  * Debugger is active!
+2025-06-17 23:56:28,542 -  * Debugger PIN: 778-736-281
+2025-06-17 23:56:39,908 - 127.0.0.1 - - [17/Jun/2025 23:56:39] "GET / HTTP/1.1" 200 -
+2025-06-17 23:56:41,274 - 127.0.0.1 - - [17/Jun/2025 23:56:41] "GET / HTTP/1.1" 200 -
+2025-06-17 23:56:47,447 - resume-krishnathakur.pdf - Frontend Developer - 28.89%
+2025-06-17 23:56:47,494 - 127.0.0.1 - - [17/Jun/2025 23:56:47] "POST /predict HTTP/1.1" 200 -
+2025-06-17 23:56:59,895 - 127.0.0.1 - - [17/Jun/2025 23:56:59] "GET /download/resume-krishnathakur_report.pdf HTTP/1.1" 200 -
+2025-06-17 23:57:22,451 - 127.0.0.1 - - [17/Jun/2025 23:57:22] "GET / HTTP/1.1" 200 -
+2025-06-18 01:34:16,601 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 01:34:16,602 - [33mPress CTRL+C to quit[0m
+2025-06-18 01:34:16,605 -  * Restarting with stat
+2025-06-18 01:34:18,886 -  * Debugger is active!
+2025-06-18 01:34:18,895 -  * Debugger PIN: 778-736-281
+2025-06-18 01:34:52,935 - 127.0.0.1 - - [18/Jun/2025 01:34:52] "GET / HTTP/1.1" 200 -
+2025-06-18 01:35:04,999 - 127.0.0.1 - - [18/Jun/2025 01:35:04] "[33mGET /www.linkedin.com/in/krishhhhh HTTP/1.1[0m" 404 -
+2025-06-18 01:35:09,607 - 127.0.0.1 - - [18/Jun/2025 01:35:09] "[33mGET /www.linkedin.com/in/krishhhhh HTTP/1.1[0m" 404 -
+2025-06-18 01:35:44,394 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 01:35:44,394 - [33mPress CTRL+C to quit[0m
+2025-06-18 01:35:44,398 -  * Restarting with stat
+2025-06-18 01:35:46,467 -  * Debugger is active!
+2025-06-18 01:35:46,472 -  * Debugger PIN: 778-736-281
+2025-06-18 01:36:03,581 - 127.0.0.1 - - [18/Jun/2025 01:36:03] "GET / HTTP/1.1" 200 -
+2025-06-18 01:36:32,439 - resume-krishnathakur.pdf - Frontend Developer - 28.89%
+2025-06-18 01:36:32,451 - 127.0.0.1 - - [18/Jun/2025 01:36:32] "POST /predict HTTP/1.1" 200 -
+2025-06-18 01:36:43,203 - 127.0.0.1 - - [18/Jun/2025 01:36:43] "GET /download/resume-krishnathakur_report.pdf HTTP/1.1" 200 -
+2025-06-18 01:37:03,638 - 127.0.0.1 - - [18/Jun/2025 01:37:03] "GET / HTTP/1.1" 200 -
+2026-02-27 21:48:06,702 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2026-02-27 21:48:06,704 - [33mPress CTRL+C to quit[0m
+2026-02-27 21:50:36,516 - 127.0.0.1 - - [27/Feb/2026 21:50:36] "GET / HTTP/1.1" 200 -
+2026-02-27 21:50:37,076 - 127.0.0.1 - - [27/Feb/2026 21:50:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-27 23:16:42,637 - 127.0.0.1 - - [27/Feb/2026 23:16:42] "GET / HTTP/1.1" 200 -

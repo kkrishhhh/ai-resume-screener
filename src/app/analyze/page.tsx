@@ -5,10 +5,12 @@ import { useDropzone } from "react-dropzone";
 import { motion, AnimatePresence } from "framer-motion";
 import { Upload, FileText, X, Loader2, ArrowLeft, Download, RotateCcw, Sparkles, CheckCircle, Brain, BarChart3, Target, MessageCircle, Send, Search } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
-import ConfidenceChart from "@/components/analyze/ConfidenceChart";
-import DetailedNormalizedIncidentReport from "@/components/ui/detailed-normalized-incident-report";
+const ConfidenceChart = dynamic(() => import("@/components/analyze/ConfidenceChart"), { ssr: false });
+const DetailedNormalizedIncidentReport = dynamic(() => import("@/components/ui/detailed-normalized-incident-report"), { ssr: false });
 import ReactMarkdown from "react-markdown";
+import RoadmapTimeline from "@/components/analyze/RoadmapTimeline";
 
 interface RolePrediction {
     name: string;
@@ -32,7 +34,7 @@ export default function AnalyzePage() {
     const [error, setError] = useState<string | null>(null);
     const [processingStep, setProcessingStep] = useState(0);
     const [isGeneratingRoadmap, setIsGeneratingRoadmap] = useState<string | null>(null);
-    const [roadmapData, setRoadmapData] = useState<{ role: string; content: string } | null>(null);
+    const [roadmapData, setRoadmapData] = useState<{ role: string; content: string; id: string } | null>(null);
 
     // ATS Matcher state
     const [showAtsPanel, setShowAtsPanel] = useState(false);
@@ -74,7 +76,7 @@ export default function AnalyzePage() {
                 throw new Error(data.error || "Failed to generate roadmap");
             }
 
-            setRoadmapData({ role: roleName, content: data.data.markdownContent });
+            setRoadmapData({ role: roleName, content: data.data.markdownContent, id: data.data.id });
         } catch (err) {
             setError(err instanceof Error ? err.message : "Failed to generate roadmap");
         } finally {
@@ -520,9 +522,7 @@ export default function AnalyzePage() {
                                                             <Sparkles className="h-5 w-5 text-blue-500" />
                                                             {roadmapData.role} Career Roadmap
                                                         </h4>
-                                                        <div className="prose prose-invert max-w-none text-sm md:text-base prose-headings:text-white prose-headings:mt-6 prose-headings:mb-3 prose-a:text-blue-400">
-                                                            <ReactMarkdown>{roadmapData.content}</ReactMarkdown>
-                                                        </div>
+                                                        <RoadmapTimeline content={roadmapData.content} role={roadmapData.role} roadmapId={roadmapData.id} skills={analysisData.skills} />
                                                     </motion.div>
                                                 )}
                                             </AnimatePresence>

@@ -12,7 +12,8 @@ type FeatureCardPorps = React.ComponentProps<'div'> & {
 };
 
 export function FeatureCard({ feature, className, ...props }: FeatureCardPorps) {
-    const p = genRandomPattern();
+    // Use a deterministic seed based on the feature title to avoid hydration mismatches
+    const p = React.useMemo(() => genRandomPattern(feature.title), [feature.title]);
 
     return (
         <div className={cn('relative overflow-hidden p-6', className)} {...props}>
@@ -64,10 +65,28 @@ function GridPattern({
     );
 }
 
-function genRandomPattern(length?: number): number[][] {
+// Simple seeded PRNG to ensure server and client generate the same pattern
+function seededRandom(seed: number): () => number {
+    return () => {
+        seed = (seed * 16807 + 0) % 2147483647;
+        return (seed - 1) / 2147483646;
+    };
+}
+
+function hashString(str: string): number {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash |= 0;
+    }
+    return Math.abs(hash) || 1;
+}
+
+function genRandomPattern(seed: string, length?: number): number[][] {
     length = length ?? 5;
+    const rng = seededRandom(hashString(seed));
     return Array.from({ length }, () => [
-        Math.floor(Math.random() * 4) + 7,
-        Math.floor(Math.random() * 6) + 1,
+        Math.floor(rng() * 4) + 7,
+        Math.floor(rng() * 6) + 1,
     ]);
 }

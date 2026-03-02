@@ -65,23 +65,65 @@ Rules:
   }
 }
 
+export interface RoadmapPhase {
+  title: string;
+  description: string;
+  duration: string;
+  topics: { name: string; description: string }[];
+  resources: { name: string; url: string; type: "course" | "book" | "article" | "video" | "tool" }[];
+  metrics: string[];
+}
+
+export interface RoadmapData {
+  targetRole: string;
+  overview: string;
+  phases: RoadmapPhase[];
+}
+
 export async function generateRoadmap(skills: string[], experienceLevel: string, targetRole: string): Promise<string> {
-  const prompt = `You are an expert technical career coach. Create a highly actionable, step-by-step career roadmap for someone aiming to become a "${targetRole}".
+  const prompt = `You are an expert technical career coach. Create a highly accurate, structured, and actionable step-by-step career roadmap for someone aiming to become a "${targetRole}".
     
 Current Profile:
 - Experience Level: ${experienceLevel}
 - Current Skills: ${skills.join(", ")}
 
-Generate a detailed markdown action plan. Structure it logically with clear headings (e.g., Phase 1: Skill Gaps, Phase 2: Portfolio Projects, Phase 3: Interview Prep, etc.).
-Keep the formatting strictly clean Markdown. Be extremely specific about tools, frameworks, and actionable steps. Do NOT hallucinate skills they already have as things they need to learn, acknowledge what they already know.`;
+You must generate a detailed roadmap in STRICT JSON format with the following exact structure:
+{
+  "targetRole": "${targetRole}",
+  "overview": "A brief, highly engaging introductory summary of what this roadmap entails and why it is exciting.",
+  "phases": [
+    {
+      "title": "Phase Name (e.g., Phase 1: Core Fundamentals / Skill Gaps)",
+      "description": "Engaging description of this phase's goals.",
+      "duration": "Estimated time (e.g., 2-4 Weeks)",
+      "topics": [
+        { "name": "Topic Name", "description": "Brief description of why this topic is important" }
+      ],
+      "resources": [
+        { "name": "Resource Name (e.g., specific Coursera course, official docs)", "url": "A realistic URL or search term if unknown", "type": "course|document|book|article|video|tool" }
+      ],
+      "metrics": [
+        "Actionable metric for success (e.g., 'Build a small API using Express')"
+      ]
+    }
+  ]
+}
+
+Rules:
+- Be extremely specific about tools, frameworks, and actionable steps.
+- Do NOT hallucinate skills they already have as things they need to learn, acknowledge what they already know.
+- Provide 3 to 5 comprehensive phases.
+- Make the descriptions motivating and interesting to read.
+- Respond with ONLY the valid JSON object, no markdown formatting globally, no code blocks around the JSON.`;
 
   const chatCompletion = await groq.chat.completions.create({
     messages: [{ role: "user", content: prompt }],
     model: "llama-3.3-70b-versatile",
     temperature: 0.3,
+    response_format: { type: "json_object" },
   });
 
-  return chatCompletion.choices[0]?.message?.content || "Could not generate roadmap.";
+  return chatCompletion.choices[0]?.message?.content || "{}";
 }
 
 // --- Feature 2: ATS JD Matcher ---
